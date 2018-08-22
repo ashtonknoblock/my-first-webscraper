@@ -16,7 +16,7 @@ def scrape(url):
     phone_numbers = re.findall(r"1?\W*([2-9][0-8][0-9])\W*([2-9][0-9]{2})\W*([0-9]{4})(\se?x?t?(\d*))?", no_script)
     links = re.findall( r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+", no_script)
     for tup in phone_numbers:
-        joined = "".join(tup)
+        joined = "-".join(tup[:3])
         numbers.append(joined)
     
     print "emails found:\n", "\n".join(emails)
