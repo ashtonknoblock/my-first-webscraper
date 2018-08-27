@@ -20,10 +20,9 @@ def scrape(url):
         numbers.append(joined)
     
     print "emails found:\n", "\n".join(emails)
-    print
     print "phone numbers found:\n", "\n".join(numbers)
     print
-    print "links found:\n", "\n".join(links)
+    print "links found:\n", "\n".join(links);
 
 
 def create_parser():
